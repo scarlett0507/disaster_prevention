@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text-html; charset=utf-8" />
+    <title>future work</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="js/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="js/layui/css/mind.css">
+    <link rel="stylesheet" href="js/layui/css/disaster_font.css" />
+    <link rel="stylesheet" type="text/css" href="js/js/dojo/dijit/themes/tundra/tundra.css" />
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/jsapi_vsdoc12_v38.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/js/esri/css/esri.css" />
+    <style>
+         dojo.require("esri.map");
+        dojo.require("esri.layers.osm");        //osm=openstreetmaplayer
+        var map, osmLayer;
+
+        function init() {
+            map = new esri.Map("map", {
+                center: [-89.924, 30.036],
+                zoom: 12,
+                logo: false
+            });
+
+            osmLayer = new esri.layers.OpenStreetMapLayer();
+            map.addLayer(osmLayer);
+        }
+
+        dojo.ready(init);
+            
+    </style>
+</head>
+<body class="claro">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo"><h2>自然環境と防災</h2></div>
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item">
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">中文</a>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="homepage.html">ホームページ</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="fold" href="javascript:;">身近にある地図</a>
+                        <dl class="layui-nav-child">
+                            <dd class="">
+                                <a href="/demo/">地図とは</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/">地図の読み方</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/">地図のきまり</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/">身近な地図とその種類</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/">さまざまな一般図</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/">さまざまな主題図</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/">電子地図</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="fold" href="javascript:;">地理情報システム</a>
+                        <dl class="layui-nav-child">
+                            <dd class="">
+                                <a href="/demo/grid.html">地理情報システムとは</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/admin.html">GISを支える技術</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/admin.html">GISの活用</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/admin.html">地図を描く</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="fold" href="javascript:;">自然環境</a>
+                        <dl class="layui-nav-child">
+                            <dd class="">
+                                <a href="/demo/button.html">地形</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/form.html">気候</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/nav.html">河川</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/tab.html">土地利用</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/progress.html">自然災害</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="fold" href="javascript:;">自然災害と防災</a>
+                        <dl class="layui-nav-child">
+                            <dd class="">
+                                <a href="/demo/layer.html">ハザートマップとは</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/laydate.html">ハザートマップの見方</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/layim.html">気候災害</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/layim.html">地震・津波と防災</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/table.html">土砂災害と防災</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/layim.html">火山災害と防災</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/table.html">台風・雪害と防災</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/laypage.html">洪水と治水</a>
+                            </dd>
+                            <dd class="">
+                                <a href="/demo/laypage.html">大都市の災害</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="layui-this" href="">future work</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-body">
+            <div id="title">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend><h3>地図コンテナ</h3></legend>
+                </fieldset>
+            </div>
+
+            <div class="demo" id="map" style="position:relative;width:700px; height:500px; border:1px solid #000;">
+            </div> 
+
+            <div id="title">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend><h3>３D地図</h3></legend>
+                </fieldset>
+            </div>
+
+            <div class="demo">
+                <iframe src="https://ics-creative.github.io/160106_threejs_trigonometric/demo/build/" frameborder="0" id="hp" style="width:100%; height:100%;"></iframe>
+            </div>
+
+            <div id="title">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend><h3>地すべり後の地形変化</h3></legend>
+                </fieldset>
+            </div>
+
+            <div class="demo">
+                <iframe src="elevationlayer.html" frameborder="0" id="hp" style="width:100%; height:100%;"></iframe>
+            </div>
+
+
+            <div id="title">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend><h3>画像の例</h3></legend>
+                </fieldset>
+            </div>
+
+            <div class="demo">
+                <img id="myImg" src="images/wildfire.jpg" alt="Northern Lights, Norway" width="600" height="400">
+             </div>
+
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">×</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+
+        </div>
+        <div class="layui-footer" style="text-align:right">
+            <!-- 底部固定区域 -->
+            <font size="1">© Csis -  本サイトに関するお問い合わせは</font>
+            <a href="test.html">songjiali@csis.u-tokyo.ac.jp</a>
+            <font size="1">までお願いします。</font>
+            <a href="http://www-new.csis.u-tokyo.ac.jp" rel="nofollow"><img src="images/logo_csis_mini.png" class="footerlogo" width="20%" /></a>
+        </div>
+    </div>
+
+
+    <script>
+// 获取模态窗口
+var modal = document.getElementById('myModal');
+
+// 获取图片模态框，alt 属性作为图片弹出中文本描述
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.alt;
+}
+
+// 获取 <span> 元素，设置关闭模态框按钮
+var span = document.getElementsByClassName("close")[0];
+
+// 点击 <span> 元素上的 (x), 关闭模态框
+span.onclick = function() {
+    modal.style.display = "none";
+}
+    </script>
+
+    <script src="js/layui/layui.all.js" charset="utf-8"></script>
+    <script>
+window.global = {
+  pageType: 'demo'
+  ,preview: function(){
+    var preview = document.getElementById('LAY_preview');
+    return preview ? preview.innerHTML : '';
+  }()
+};
+layui.config({
+  base: '/js'
+  ,version: '1515376178738'
+}).use('global');
+    </script>
+    <div id="LAY_democodejs">
+        <script>
+layui.use('element', function(){
+  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+        </script>
+    </div>
+</body>
+</html>

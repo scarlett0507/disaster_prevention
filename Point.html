@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>IntegratedMeshLayer - 4.5</title>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.5/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.5/"></script>
+
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    #infoDiv {
+      position: absolute;
+      top: 15px;
+      left: 60px;
+    }
+
+  </style>
+
+  <script>
+      require([
+          "esri/Map",
+          "esri/views/SceneView",
+          "esri/layers/IntegratedMeshLayer",
+          "dojo/domReady!"
+      ],
+          function (
+              Map, SceneView,
+              IntegratedMeshLayer
+          ) {
+
+              var layer = new IntegratedMeshLayer({
+                  url: "https://tiles.arcgis.com/tiles/FQD0rKU8X5sAQfh8/arcgis/rest/services/VRICON_Yosemite_Sample_Integrated_Mesh_scene_layer/SceneServer"
+              });
+
+              var map = new Map({
+                  basemap: "satellite",
+                  layers: [layer],
+                  ground: "world-elevation"
+              });
+
+              var view = new SceneView({
+                  container: "viewDiv",
+                  map: map,
+                  camera: {
+                      position: {
+                          x: 14583725,
+                          y: 3880900,
+                          z: 2546,
+                          spatialReference: {
+                              wkid: 3857
+                          }
+                      },
+                      tilt: 84,
+                      heading: 85
+                  }
+              });
+
+          });    
+  </script>
+</head>
+
+
+<body>
+  <div id="viewDiv"></div>
+  <div id="infoDiv"  >
+    <input class="esri-component esri-widget-button esri-widget esri-interactive" type="button" id="switch-btn" value="PointCloud" style="width:100px;height:30px;" onclick="window.location = 'System.html';">
+  </div>
+    
+</body>
+</html>
