@@ -42,7 +42,7 @@ Error) { for (var c in a) console.log(c + ":", a[c]); console.log(".") }
 } catch (d) { }
 }); d(p, { uid: u, cache: N, packs: G }); if (v.define) H("error", c("defineAlreadyDefined", 0)); else { v.define = Ja; v.require = p; f(Qa, function (a) { la(a) }); var Za = Y.deps || b.deps || n.deps, $a = Y.callback || b.callback || n.callback; p.boot = Za || $a ? [Za || [], $a] : 0 }
 })(this.dojoConfig || this.djConfig || this.require || {}, {
-    async: 0, baseUrl: (location.protocol === 'file:' ? 'http:' : location.protocol) + '//' +  "scarlett0507.github.io/disaster_prevention/js/js/dojo/dojo", hasCache: {
+    async: 0, baseUrl: (location.protocol === 'file:' ? 'https:' : location.protocol) + '//' +  "scarlett0507.github.io/disaster_prevention/js/js/dojo/dojo", hasCache: {
         "config-selectorEngine": "acme", "config-tlmSiblingOfDojo": 1, "dojo-built": 1, "dojo-has-api": 1,
 "dojo-loader":1,"dojo-undef-api":0,dom:1,"extend-esri":1,"host-browser":1},packages:[{location:"../dojox",name:"dojox"},{location:"../../dgrid",main:"OnDemandGrid",name:"dgrid"},{location:"../dijit",name:"dijit"},{location:"../../xstyle",name:"xstyle"},{location:"../../esri",name:"esri"},{location:".",name:"dojo"},{location:"../../put-selector",main:"put",name:"put-selector"}]});
 require({cache:{"dojo/request/default":function(){define(["exports","require","../has"],function(b,n,e){var q=e("config-requestProvider");q||(q="./xhr");b.getPlatformDefaultId=function(){return"./xhr"};b.load=function(b,m,e,k){n(["platform"==b?"./xhr":q],function(b){e(b)})}})},"dojo/_base/fx":function(){define("./kernel ./config ./lang ../Evented ./Color ../aspect ../sniff ../dom ../dom-style".split(" "),function(b,n,e,q,l,m,r,k,h){var a=e.mixin,f={},d=f._Line=function(a,c){this.start=a;this.end=
