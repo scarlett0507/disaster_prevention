@@ -7,27 +7,7 @@
     <link rel="stylesheet" href="js/layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="js/layui/css/mind.css">
     <link rel="stylesheet" href="js/layui/css/disaster_font.css" />
-    <link rel="stylesheet" type="text/css" href="js/js/dojo/dijit/themes/tundra/tundra.css" />
-    <script type="text/javascript" src="js/init.js"></script>
-    <script type="text/javascript" src="js/jsapi_vsdoc12_v38.js"></script>
-    <link rel="stylesheet" type="text/css" href="js/js/esri/css/esri.css" />
     <style>
-         dojo.require("esri.map");
-        dojo.require("esri.layers.osm");        //osm=openstreetmaplayer
-        var map, osmLayer;
-
-        function init() {
-            map = new esri.Map("map", {
-                center: [-89.924, 30.036],
-                zoom: 12,
-                logo: false
-            });
-
-            osmLayer = new esri.layers.OpenStreetMapLayer();
-            map.addLayer(osmLayer);
-        }
-
-        dojo.ready(init);
             
     </style>
 </head>
@@ -154,12 +134,6 @@
             </div>
         </div>
         <div class="layui-body">
-            <div id="title">
-                <fieldset class="layui-elem-field layui-field-title">
-                    <legend><h3>地図コンテナ</h3></legend>
-                </fieldset>
-            </div>
-
             <div class="demo" id="map" style="position:relative;width:700px; height:500px; border:1px solid #000;">
             </div> 
 
